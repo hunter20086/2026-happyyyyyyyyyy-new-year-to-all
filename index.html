@@ -59,37 +59,20 @@ html, body {
 }
 
 #year {
-    font-size: 8rem; /* keep large but not overwhelming */
+    font-size: 8rem; /* slightly smaller for longer text */
+    opacity: 0;
     font-weight: 900;
     letter-spacing: 5px;
-    opacity: 1; /* make it visible */
-    
-    /* Elegant gradient */
-    background: linear-gradient(90deg, #00ffff, #1e90ff, #00ced1, #87cefa);
-    background-size: 200% 200%;
+    background: linear-gradient(90deg, #00FFFF, #00CED1, #1E90FF, #00BFFF);
+    background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    /* Subtle soft glow */
     text-shadow: 
-        0 0 5px rgba(0,255,255,0.5),
-        0 0 10px rgba(30,144,255,0.4);
-
-    /* Smooth shimmer animation */
-    animation: shimmer 5s ease-in-out infinite, pulse 2s ease-in-out infinite;
-}
-
-/* Shimmer animation */
-@keyframes shimmer {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Pulse effect */
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.9; }
+        0 0 10px #00FFFF, 
+        0 0 20px #00CED1, 
+        0 0 30px #1E90FF, 
+        0 0 40px #00BFFF;
+    animation: shimmer 5s linear infinite, pulse 1s infinite;
 }
 
 
